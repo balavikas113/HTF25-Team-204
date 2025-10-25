@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Outfit Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Outfit Planner</h1>
+            <nav>
+                <button onclick="showScreen('home')" class="nav-btn">Home</button>
+                <button onclick="showScreen('wardrobe')" class="nav-btn">Wardrobe</button>
+                <button onclick="showScreen('favorites')" class="nav-btn">Favorites</button>
+            </nav>
+        </header>
+
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen active">
+            <h2>Style Preferences</h2>
+            <div class="style-buttons">
+                <button onclick="setStyle('gen-z')" class="style-btn">Gen Z</button>
+                <button onclick="setStyle('gen-x')" class="style-btn">Gen X</button>
+                <button onclick="setStyle('classic')" class="style-btn">Classic</button>
+            </div>
+
+            <div class="input-group">
+                <label for="event-type">Event Type:</label>
+                <select id="event-type">
+                    <option value="casual">Casual</option>
+                    <option value="business">Business</option>
+                    <option value="formal">Formal</option>
+                    <option value="party">Party</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="weather">Weather:</label>
+                <select id="weather">
+                    <option value="hot">Hot</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="cold">Cold</option>
+                    <option value="rainy">Rainy</option>
+                </select>
+            </div>
+
+            <button onclick="getOutfitSuggestion()" class="primary-btn">Get Outfit Suggestions</button>
+        </div>
+
+        <!-- Outfit Screen -->
+        <div id="outfit-screen" class="screen">
+            <h2>Outfit Suggestion</h2>
+            <div id="outfit-details">
+                <div class="style-info"></div>
+                <div class="outfit-item">
+                    <h3>Top:</h3>
+                    <p class="top"></p>
+                </div>
+                <div class="outfit-item">
+                    <h3>Bottom:</h3>
+                    <p class="bottom"></p>
+                </div>
+                <div class="outfit-item">
+                    <h3>Shoes:</h3>
+                    <p class="shoes"></p>
+                </div>
+                <div class="outfit-item">
+                    <h3>Accessories:</h3>
+                    <ul class="accessories"></ul>
+                </div>
+                <div class="tips-box">
+                    <h3>Style Tips:</h3>
+                    <ul class="tips"></ul>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button onclick="showAlternative()" class="secondary-btn">Show Alternative</button>
+                <button onclick="saveToFavorites()" class="primary-btn">Save to Favorites</button>
+            </div>
+        </div>
+
+        <!-- Wardrobe Screen -->
+        <div id="wardrobe-screen" class="screen">
+            <h2>Your Wardrobe</h2>
+            <div class="input-group">
+                <input type="text" id="wardrobe-item" placeholder="e.g., blue jeans, white tee">
+                <button onclick="addWardrobeItem()" class="primary-btn">Add Item</button>
+            </div>
+            <ul id="wardrobe-list"></ul>
+        </div>
+
+        <!-- Favorites Screen -->
+        <div id="favorites-screen" class="screen">
+            <h2>Saved Outfits</h2>
+            <div id="favorites-list"></div>
+        </div>
+    </div>
+
+    <script src="outfitEngine.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
