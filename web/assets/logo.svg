@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hanger -->
+    <path d="M24 8C25.6569 8 27 9.34315 27 11C27 12.6569 25.6569 14 24 14C22.3431 14 21 12.6569 21 11C21 9.34315 22.3431 8 24 8Z" fill="#4A90E2"/>
+    <path d="M44 36H4L24 16L44 36Z" stroke="#4A90E2" stroke-width="2" fill="none"/>
+    <!-- AI Circuit Pattern -->
+    <circle cx="24" cy="11" r="2" fill="#4A90E2"/>
+    <line x1="24" y1="24" x2="34" y2="34" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="24" y1="24" x2="14" y2="34" stroke="#4A90E2" stroke-width="1"/>
+    <circle cx="14" cy="34" r="2" fill="#4A90E2"/>
+    <circle cx="34" cy="34" r="2" fill="#4A90E2"/>
+</svg>

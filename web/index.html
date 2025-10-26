@@ -8,8 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>AI Outfit Planner</h1>
+        <header class="hero">
+            <div style="display:flex;gap:12px;align-items:center">
+              <img src="assets/new-logo.svg" alt="AI Outfit Planner Logo" class="item-image" style="width: 48px; height: 48px;">
+              <h1>AI Outfit Planner</h1>
+            </div>
             <nav>
                 <button onclick="showScreen('home')" class="nav-btn">Home</button>
                 <button onclick="showScreen('wardrobe')" class="nav-btn">Wardrobe</button>
@@ -46,33 +49,60 @@
                 </select>
             </div>
 
+            <div class="input-group">
+                <label for="color-pref">Color Preference:</label>
+                <select id="color-pref">
+                  <option value="neutral">Neutral</option>
+                  <option value="bold">Bold</option>
+                  <option value="pastel">Pastel</option>
+                  <option value="monochrome">Monochrome</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Accessory Focus:</label>
+                <label><input type="checkbox" class="acc-pref" value="hat"> Hat</label>
+                <label><input type="checkbox" class="acc-pref" value="necklace"> Necklace</label>
+                <label><input type="checkbox" class="acc-pref" value="belt"> Belt</label>
+                <label><input type="checkbox" class="acc-pref" value="bag"> Bag</label>
+            </div>
+
+            <div class="input-group">
+                <label for="num-alt">Number of alternatives:</label>
+                <input id="num-alt" type="number" value="2" min="0" max="5" style="width:72px">
+            </div>
+
             <button onclick="getOutfitSuggestion()" class="primary-btn">Get Outfit Suggestions</button>
         </div>
 
         <!-- Outfit Screen -->
         <div id="outfit-screen" class="screen">
             <h2>Outfit Suggestion</h2>
-            <div id="outfit-details">
-                <div class="style-info"></div>
-                <div class="outfit-item">
-                    <h3>Top:</h3>
-                    <p class="top"></p>
+            <div id="outfit-details" class="outfit-grid">
+                <div>
+                  <div class="style-info"></div>
+                  <div class="outfit-item">
+                      <h3>Top:</h3>
+                      <p class="top"></p>
+                  </div>
+                  <div class="outfit-item">
+                      <h3>Bottom:</h3>
+                      <p class="bottom"></p>
+                  </div>
+                  <div class="outfit-item">
+                      <h3>Shoes:</h3>
+                      <p class="shoes"></p>
+                  </div>
                 </div>
-                <div class="outfit-item">
-                    <h3>Bottom:</h3>
-                    <p class="bottom"></p>
-                </div>
-                <div class="outfit-item">
-                    <h3>Shoes:</h3>
-                    <p class="shoes"></p>
-                </div>
-                <div class="outfit-item">
-                    <h3>Accessories:</h3>
-                    <ul class="accessories"></ul>
-                </div>
-                <div class="tips-box">
-                    <h3>Style Tips:</h3>
-                    <ul class="tips"></ul>
+                <div>
+                  <div class="outfit-item">
+                      <h3>Accessories:</h3>
+                      <ul class="accessories"></ul>
+                  </div>
+                  <div class="tips-box">
+                      <h3>Style Tips:</h3>
+                      <ul class="tips"></ul>
+                  </div>
                 </div>
             </div>
             <div class="action-buttons">
@@ -87,6 +117,10 @@
             <div class="input-group">
                 <input type="text" id="wardrobe-item" placeholder="e.g., blue jeans, white tee">
                 <button onclick="addWardrobeItem()" class="primary-btn">Add Item</button>
+                            <button onclick="exportWardrobe()" class="secondary-btn" style="margin-left:8px">Export Wardrobe</button>
+                            <label class="secondary-btn" style="margin-left:8px">
+                                Import <input id="import-file" type="file" accept="application/json" style="display:none" onchange="importJson(event)">
+                            </label>
             </div>
             <ul id="wardrobe-list"></ul>
         </div>
@@ -94,7 +128,11 @@
         <!-- Favorites Screen -->
         <div id="favorites-screen" class="screen">
             <h2>Saved Outfits</h2>
-            <div id="favorites-list"></div>
+                        <div style="display:flex;gap:8px;align-items:center">
+                            <button onclick="exportFavorites()" class="secondary-btn">Export Favorites</button>
+                            <button onclick="clearFavorites()" class="secondary-btn">Clear Favorites</button>
+                        </div>
+                        <div id="favorites-list"></div>
         </div>
     </div>
 

@@ -1,0 +1,41 @@
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+body{background:#f4f6f8;color:#222;margin:0}
+.container{max-width:900px;margin:28px auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 6px 20px rgba(16,24,40,.08)}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.nav-btn{background:#eef2ff;border:1px solid #dbeafe;padding:8px 12px;border-radius:6px;margin-left:8px;cursor:pointer}
+.screen{display:none}
+.screen.active{display:block}
+.style-buttons{display:flex;gap:8px;margin-bottom:12px}
+.style-btn{padding:10px 14px;border-radius:6px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+.style-btn.active{background:#111827;color:#fff}
+.input-group{margin-bottom:12px}
+.primary-btn{background:#2563eb;color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+.secondary-btn{background:#e5e7eb;color:#111827;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+.outfit-item{margin:10px 0}
+.tips-box{background:#f8fafc;padding:10px;border-radius:6px}
+.action-buttons{display:flex;gap:8px;margin-top:12px}
+#wardrobe-list, #favorites-list{margin-top:12px}
+.wardrobe-row{display:flex;justify-content:space-between;align-items:center;background:#f8fafc;padding:8px;border-radius:6px;margin-bottom:8px}
+.favorite-card{border:1px solid #eee;padding:10px;border-radius:6px;margin-bottom:10px;background:#fff}
+small.hint{color:#6b7280}
+/* image placeholders */
+.item-image{width:100%;max-width:160px;height:140px;object-fit:cover;border-radius:6px;border:1px solid #e6e9ef}
+.hero{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.hero h1{margin:0;font-size:20px}
+/* layout improvements */
+.container{padding:24px}
+.screen{padding-top:8px}
+.input-group label{display:block;margin-bottom:6px;font-weight:600}
+.input-group select, .input-group input[type="text"], .input-group input[type="number"]{padding:8px;border-radius:6px;border:1px solid #e6e9ef;width:100%;max-width:320px}
+.outfit-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.outfit-item h3{margin:0 0 6px 0}
+.action-buttons{justify-content:flex-end}
+.secondary-btn{background:#f3f4f6;border:1px solid #e5e7eb}
+.primary-btn{box-shadow:0 4px 10px rgba(37,99,235,.12)}
+.wardrobe-row div{flex:1}
+.favorite-card{display:block}
+@media (max-width:700px){
+	.outfit-grid{grid-template-columns:1fr}
+	.hero{flex-direction:column;align-items:flex-start}
+	.nav-btn{margin-left:4px;margin-top:8px}
+}
