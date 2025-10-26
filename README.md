@@ -1,6 +1,28 @@
-# AI Outfit Planner — Prototype
+# AI Outfit Planner
 
-This repository contains a React Native prototype for the Hacktober/HTF25 "AI Outfit Planner for All Styles" hackathon project. I added a simple, local outfit suggestion engine and a Node test harness so you can run the suggestion logic without building the mobile app.
+A comprehensive outfit planning solution available as both a web application and a React Native mobile app. This project was developed for the Hacktober/HTF25 "AI Outfit Planner for All Styles" hackathon.
+
+## 🌟 Features
+
+- **Smart Outfit Suggestions**: Get personalized outfit combinations based on your preferences
+- **Style Preferences**: Choose from multiple style categories (Gen Z, Gen X, Classic)
+- **Event-based Recommendations**: Get outfits for various occasions (Casual, Business, Formal, Party)
+- **Weather Consideration**: Outfit suggestions adapted to different weather conditions
+- **Color Preferences**: Select your preferred color scheme
+- **Accessory Focus**: Customize your look with various accessories
+- **Wardrobe Management**: Easily manage your clothing items
+- **Favorites System**: Save and organize your favorite outfit combinations
+- **Import/Export**: Backup and restore your wardrobe and favorites
+
+## 🌐 Web Application
+
+Visit the live web application: [AI Outfit Planner Web](https://balavikas113.github.io/HTF25-Team-204/)
+
+### Web Features
+- Responsive design works on all devices
+- No installation required
+- Local storage for data persistence
+- Modern, intuitive interface
 
 What I added for you now
 - `src/services/outfitService.js`: a heuristic-based outfit suggestion engine used by the app (runs in the React Native app).
@@ -57,9 +79,42 @@ Code walkthrough (quick)
 - `src/services/favoritesService.js` — Simple favorites persistence.
 - `src/services/wardrobeService.js` — Wardrobe persistence (add/get/remove/clear).
 
-If you want a deeper, line-by-line walkthrough of any file I changed, tell me which file and I'll expand it with comments and explanations for beginners.
+## 💻 Technologies Used
 
-Tell me which next step you want and I'll implement it. If you want, I'll also walk you through installing Android emulators and running the mobile app step-by-step on your Windows machine.
+- **Web Application**:
+  - HTML5
+  - CSS3
+  - JavaScript (ES6+)
+  - Local Storage for data persistence
+  - GitHub Pages for deployment
+
+- **Mobile Application**:
+  - React Native
+  - AsyncStorage for data persistence
+  - React Navigation
+  - Node.js development environment
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👥 Team
+
+- Developer: [balavikas113](https://github.com/balavikas113)
+- Project: HTF25-Team-204
+
+## 📞 Support
+
+If you have any questions or need support, please open an issue in the GitHub repository.
 
 ---
-Generated: October 25, 2025
+Generated: October 26, 2025
