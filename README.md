@@ -54,9 +54,9 @@ This project is open source and available under the MIT License.
 
 ## 👥 Team
 
-- Developer: Chimmula Sathwika reddy 
-	           Sangaraju Balavikas
-	           Dasari Vivek
+- Developer: Chimmula Sathwika reddy, 
+	           Sangaraju Balavikas,
+	           Dasari Vivek,
 	           Victor Mareena dilmi                  
 - Project: HTF25-Team-204
 
